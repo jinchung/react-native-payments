@@ -1,6 +1,6 @@
 {
-  "name": "@exodus/react-native-payments",
-  "version": "1.1.0",
+  "name": "@rainbow-me/react-native-payments",
+  "version": "1.1.2",
   "main": "lib/js/index.js",
   "scripts": {
     "run:packager": "cd examples/native && yarn run:packager",
@@ -9,7 +9,7 @@
     "run:demo": "cd examples/native && yarn run:demo",
     "test": "jest"
   },
-  "repository": "https://github.com/naoufal/react-native-payments",
+  "repository": "https://github.com/jinchung/react-native-payments",
   "keywords": [
     "react",
     "react-native",
