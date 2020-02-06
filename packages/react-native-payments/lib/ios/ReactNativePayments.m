@@ -51,6 +51,7 @@ RCT_EXPORT_METHOD(createPaymentRequest: (NSDictionary *)methodData
     self.paymentRequest.merchantCapabilities = PKMerchantCapability3DS;
     self.paymentRequest.countryCode = methodData[@"countryCode"];
     self.paymentRequest.currencyCode = methodData[@"currencyCode"];
+    self.paymentRequest.supportedCountries = [self getSupportedCountriesFromMethodData:methodData];
     self.paymentRequest.supportedNetworks = [self getSupportedNetworksFromMethodData:methodData];
     self.paymentRequest.paymentSummaryItems = [self getPaymentSummaryItemsFromDetails:details];
     self.paymentRequest.shippingMethods = [self getShippingMethodsFromDetails:details];
@@ -263,6 +264,13 @@ RCT_EXPORT_METHOD(handleDetailsUpdate: (NSDictionary *)details
     }
     
     return supportedNetworks;
+}
+
+- (NSArray *_Nonnull)getSupportedCountriesFromMethodData:(NSDictionary *_Nonnull)methodData
+{
+    NSArray *jsSupportedCountries = methodData[@"supportedCountries"];
+    NSSet *supportedCountries = [[NSSet alloc] initWithArray:jsSupportedCountries];
+    return supportedCountries;
 }
 
 - (NSArray<PKPaymentSummaryItem *> *_Nonnull)getPaymentSummaryItemsFromDetails:(NSDictionary *_Nonnull)details
