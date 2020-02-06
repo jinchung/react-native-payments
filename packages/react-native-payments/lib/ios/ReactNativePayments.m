@@ -48,7 +48,7 @@ RCT_EXPORT_METHOD(createPaymentRequest: (NSDictionary *)methodData
     
     self.paymentRequest = [[PKPaymentRequest alloc] init];
     self.paymentRequest.merchantIdentifier = merchantId;
-    self.paymentRequest.merchantCapabilities = PKMerchantCapability3DS;
+    self.paymentRequest.merchantCapabilities = PKMerchantCapability3DS | PKMerchantCapabilityDebit;
     self.paymentRequest.countryCode = methodData[@"countryCode"];
     self.paymentRequest.currencyCode = methodData[@"currencyCode"];
     self.paymentRequest.supportedCountries = [self getSupportedCountriesFromMethodData:methodData];
