@@ -1,5 +1,5 @@
 {
-  "name": "@exodus/react-native-payments",
+  "name": "@jinchung/react-native-payments",
   "version": "1.1.0",
   "main": "lib/js/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "run:demo": "cd examples/native && yarn run:demo",
     "test": "jest"
   },
-  "repository": "https://github.com/naoufal/react-native-payments",
+  "repository": "https://github.com/jinchung/react-native-payments",
   "keywords": [
     "react",
     "react-native",

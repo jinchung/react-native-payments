@@ -3,7 +3,7 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "lerna": "^2.0.0",
+    "lerna": "^3.20.2",
     "lint-staged": "^4.0.0",
     "prettier": "^1.4.4"
   },
