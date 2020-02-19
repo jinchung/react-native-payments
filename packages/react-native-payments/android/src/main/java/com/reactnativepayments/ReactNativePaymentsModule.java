@@ -25,6 +25,4 @@ public class ReactNativePaymentsModule extends ReactContextBaseJavaModule {
         return REACT_CLASS;
     }
 
-
-
 }
